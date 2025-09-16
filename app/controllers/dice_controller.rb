@@ -46,4 +46,16 @@ class DiceController < ApplicationController
 
     render({ :template => "dice_templates/result_five_four" })
   end
+
+  def roll_fifty_six
+    @rolls = []
+
+    50.times do
+      dice = rand(1..6)
+      @rolls.push(dice)
+    end
+
+    render({ :template => "dice_templates/result_fifty_six" })
+  end
+  
 end
